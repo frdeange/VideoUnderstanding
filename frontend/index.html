@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Video Descriptor Generator</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Video Descriptor Generator</h1>
+    <p>Sube un vídeo corto (≤40 MB). La Aplicación describirá lo que va ocurriendo durante el vídeo, de forma síncrona a las escenas.</p>
+    <form id="uploadForm" autocomplete="off">
+      <label class="upload-area" id="uploadArea">
+        <span class="upload-icon">📹</span><br>
+        <span id="uploadText">Arrastra tu vídeo aquí o haz clic para seleccionar</span>
+        <input type="file" name="file" id="fileInput" accept="video/*" required />
+        <div class="filename" id="filename"></div>
+        <video id="videoPreview" style="display:none; margin-top:12px; max-width:100%; border-radius:8px; background:#000;" controls muted></video>
+      </label>
+      <button type="submit" id="submitBtn" disabled>Analizar vídeo</button>
+      <div class="progress" id="progress"><div class="progress-bar" id="progressBar"></div></div>
+    </form>
+  </div>
+  <div id="result"></div>
+  <footer>
+    created by <a href="https://www.linkedin.com/in/fdangel/" target="_blank" rel="noopener">Kiko de Ángel</a>
+  </footer>
+  <script src="scripts.js"></script>
+</body>
+</html>
