@@ -1,0 +1,13 @@
+AOAI_VIDEO_ENDPOINT="https://YOURAZUREOPENAIENDPOINTFORVIDEO.openai.azure.com/"
+AOAI_VIDEO_API_KEY="YOURKEYHEREFORENDPOINT1"
+AOAI_VIDEO_DEPLOYMENT="gpt-4o-mini"  # or your deployment name
+AOAI_VIDEO_API_VERSION="2024-12-01-preview"  # or the version you enabled
+
+AOAI_TTS_ENDPOINT="https://YOURAZUREOPENAIENDPOINFORTTS.openai.azure.com"
+AOAI_TTS_API_KEY="YOURKEYHEREFORENDPOINT2"
+AOAI_TTS_API_VERSION="2025-03-01-preview"
+AOAI_TTS_DEPLOYMENT="gpt-4o-mini-tts"
+AOAI_TTS_VOICE="echo"
+
+APP_SCENE_THRESH="0.3"  # Not use in the current demo, but you can set it up for your own use
+APP_FRAME_RATE="0.2"    # Setup for the number of frames per second to be analyzed. 0.2 is 1 frame every 5 seconds
