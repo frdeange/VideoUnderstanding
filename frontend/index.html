@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Video Descriptor Generator (Alternative)</title>
+  <title>Video Descriptor Generator</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,39 +12,39 @@
 <body>
   <div class="container">
     <h1>Video Descriptor Generator</h1>
-    <p>Sube un vídeo corto (≤40 MB). Elige el idioma y la aplicación describirá lo que ocurre en el vídeo, de forma sincronizada.</p>
+    <p>Upload a short video (≤40 MB). Choose the language and the app will describe what happens in the video, in sync with the scenes.</p>
     <form id="uploadForm" autocomplete="off">
       <label class="upload-area" id="uploadArea">
         <span class="upload-icon">📹</span><br>
-        <span id="uploadText">Arrastra tu vídeo aquí o haz clic para seleccionar</span>
+        <span id="uploadText">Drag your video here or click to select</span>
         <input type="file" name="file" id="fileInput" accept="video/*" required />
         <div class="filename" id="filename"></div>
         <video id="videoPreview" style="display:none; margin-top:12px; max-width:100%; border-radius:8px; background:#000;" controls muted></video>
       </label>
       <div class="lang-select">
-        <label for="lang">Idioma de la descripción:</label>
+        <label for="lang">Description language:</label>
         <select id="lang" name="lang">
           <option value="es">Español</option>
           <option value="en">English</option>
         </select>
       </div>
       <div class="lang-select">
-        <label for="tts_voice">Voz de la narración:</label>
+        <label for="tts_voice">Narration voice:</label>
         <select id="tts_voice" name="tts_voice">
-          <option value="ballad">Masculina 1 (Ballad)</option>
-          <option value="ash">Masculina 2 (Ash)</option>
-          <option value="alloy">Femenina 1 (Alloy)</option>
-          <option value="sage">Femenina 2 (Sage)</option>
+          <option value="ballad">Male 1 (Ballad)</option>
+          <option value="ash">Male 2 (Ash)</option>
+          <option value="alloy">Female 1 (Alloy)</option>
+          <option value="sage">Female 2 (Sage)</option>
         </select>
       </div>
-      <button type="submit" id="submitBtn" disabled>Analizar vídeo</button>
+      <button type="submit" id="submitBtn" disabled>Analyze video</button>
       <!-- <div class="progress" id="progress"><div class="progress-bar" id="progressBar"></div></div> -->
       <div class="step-progress-bar" id="stepProgressBar" style="display: none;">
-        <div class="step" id="step-upload">Subir Vídeo</div>
-        <div class="step" id="step-extract">Extraer Fotogramas</div>
-        <div class="step" id="step-analyze">Analizar Fotogramas</div>
-        <div class="step" id="step-tts">Generar Audio</div>
-        <div class="step" id="step-assemble">Ensamblar Vídeo</div>
+        <div class="step" id="step-upload">Upload Video</div>
+        <div class="step" id="step-extract">Extract Frames</div>
+        <div class="step" id="step-analyze">Analyze Frames</div>
+        <div class="step" id="step-tts">Generate Audio</div>
+        <div class="step" id="step-assemble">Assemble Video</div>
       </div>
     </form>
   </div>
